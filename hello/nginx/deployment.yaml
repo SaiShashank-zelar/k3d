@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: hello
   labels:
-    app: nginx
+    app: hello
 spec:
   selector:
     matchLabels:
-      app: nginx
+      app: hello
   template:
     metadata:
       labels:
-        app: nginx
+        app: hello
     spec:
       containers:
-        - name: nginx
-          image: sheshuvalandas/helloworld
+        - name: hello
+          image: sheshuvalandas/hello
           ports:
             - containerPort: 80
