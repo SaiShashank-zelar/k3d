@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-toolkit
+  name: hello
   labels:
-    app: devops-toolkit
+    app: hello
 spec:
   selector:
     matchLabels:
-      app: devops-toolkit
+      app: hello
   template:
     metadata:
       labels:
-        app: devops-toolkit
+        app: hello
     spec:
       containers:
-        - name: devops-toolkit
+        - name: hello
           image: sheshuvalandas/helloworld
           ports:
             - containerPort: 80
